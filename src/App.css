@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.App {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* Light Mode */
+.light-mode {
+  background: #f8f9fa;
+  color: #333;
+}
+
+.light-mode .glass-card {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  color: #333;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark-mode .glass-card {
+  background: #2d2d2d;
+  border: 1px solid #404040;
+  color: #ffffff;
+}
+
+/* Modern card design */
+.glass-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Smooth animations */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Button styles */
+.btn-primary {
+  background: #2c5aa0;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(44, 90, 160, 0.2);
+}
+
+.btn-primary:hover {
+  background: #1e3d6f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(44, 90, 160, 0.3);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: transparent;
+  border: 2px solid #2c5aa0;
+  color: #2c5aa0;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dark-mode .theme-toggle {
+  border-color: #4a7bc8;
+  color: #4a7bc8;
+}
+
+.theme-toggle:hover {
+  background: #2c5aa0;
+  color: white;
+}
+
+.dark-mode .theme-toggle:hover {
+  background: #4a7bc8;
+  color: white;
+}
+
+/* Color palette for different sections */
+:root {
+  --primary-blue: #2c5aa0;
+  --secondary-blue: #4a7bc8;
+  --accent-green: #28a745;
+  --accent-orange: #fd7e14;
+  --accent-purple: #6f42c1;
+  --accent-pink: #e83e8c;
+  --accent-teal: #20c997;
+}
+
+/* Dark mode color overrides */
+.dark-mode {
+  --primary-blue: #4a7bc8;
+  --secondary-blue: #6b9ae8;
+  --accent-green: #34ce57;
+  --accent-orange: #ff922b;
+  --accent-purple: #8c68cd;
+  --accent-pink: #ec5e99;
+  --accent-teal: #38d9a9;
+}
+
+/* Ensure proper z-index for sidebar components */
+.sidebar {
+  z-index: 1000;
+}
+
+.sidebar-toggle {
+  z-index: 1001;
+}
+
+.sidebar-overlay {
+  z-index: 999;
+}
+
+.navbar {
+  z-index: 998;
+}

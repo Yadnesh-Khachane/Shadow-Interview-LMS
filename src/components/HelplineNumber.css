@@ -1,0 +1,169 @@
+.helpline-compact-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    margin: 15px 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .helpline-compact-container:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .helpline-compact-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .helpline-compact-header:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .helpline-compact-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: white;
+    font-size: 0.95rem;
+  }
+  
+  .helpline-compact-icon {
+    font-size: 1.1rem;
+  }
+  
+  .helpline-compact-arrow {
+    color: white;
+    transition: transform 0.3s ease;
+    font-size: 0.7rem;
+  }
+  
+  .helpline-compact-arrow.expanded {
+    transform: rotate(180deg);
+  }
+  
+  .helpline-compact-content {
+    background: white;
+    animation: slideDown 0.3s ease;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .helpline-compact-list {
+    padding: 15px;
+  }
+  
+  .helpline-compact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+  }
+  
+  .helpline-compact-item:hover {
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 10px 8px;
+    margin: 0 -8px;
+  }
+  
+  .helpline-compact-item:last-child {
+    border-bottom: none;
+  }
+  
+  .service-compact-icon {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+  }
+  
+  .service-compact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+  }
+  
+  .service-compact-name {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.85rem;
+  }
+  
+  .service-compact-hours {
+    font-size: 0.7rem;
+    color: #666;
+    background: #f1f3f4;
+    padding: 1px 6px;
+    border-radius: 8px;
+    width: fit-content;
+  }
+  
+  .helpline-compact-number {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    border: 2px solid #667eea;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .helpline-compact-number:hover {
+    background: #667eea;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .helpline-compact-container {
+      max-width: 100%;
+      margin: 10px 0;
+    }
+    
+    .helpline-compact-header {
+      padding: 10px 14px;
+    }
+    
+    .helpline-compact-title {
+      font-size: 0.9rem;
+    }
+    
+    .helpline-compact-list {
+      padding: 12px;
+    }
+    
+    .helpline-compact-item {
+      gap: 10px;
+      padding: 8px 0;
+    }
+    
+    .helpline-compact-number {
+      font-size: 0.75rem;
+      padding: 5px 10px;
+    }
+  }
